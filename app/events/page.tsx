@@ -288,27 +288,7 @@ export default function Events() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-crocus">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Don't Miss Out!</h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Stay updated with our latest events and be the first to know about new opportunities.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">
-              Join Our Newsletter
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-crocus bg-transparent"
-            >
-              View Calendar
-            </Button>
-          </div>
-        </div>
-      </section>
+    
 
       {/* Footer */}
       <footer className="bg-soot-glue py-12">
