@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-soot-glue">
+    <div className="min-h-screen bg-soot-glue"> 
       {/* Navigation */}
       <nav className="bg-soot-glue border-b border-gray-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
