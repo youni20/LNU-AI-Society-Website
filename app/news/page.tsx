@@ -8,36 +8,36 @@ import Link from "next/link"
 export default function News() {
   return (
     <div className="min-h-screen bg-soot-glue">
-      {/* Navigation */}
+        {/* Navigation */}
       <nav className="bg-soot-glue border-b border-gray-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-3">
-              <Image
+            <a href="/" className="flex items-center space-x-3">
+              <img
                 src="/images/logo-symbol.png"
                 alt="LNU AI Society Logo"
                 width={40}
                 height={40}
-                className="h-10 w-auto filter invert"
+                className="h-10 w-auto"
               />
-              <span className="text-xl font-bold text-buttercup">LNU AI Society</span>
-            </Link>
+              <span className="text-xl font-bold text-white">LNU AI Society</span>
+            </a>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-buttercup hover:text-yellow-200 transition-colors">
+              <a href="/" className="text-white hover:text-buttercup transition-colors">
                 Home
-              </Link>
-              <Link href="/about" className="text-buttercup hover:text-yellow-200 transition-colors">
+              </a>
+              <a href="/about" className="text-white hover:text-buttercup transition-colors">
                 About
-              </Link>
-              <Link href="/courses" className="text-buttercup hover:text-yellow-200 transition-colors">
+              </a>
+              <a href="/courses" className="text-white hover:text-buttercup transition-colors font-medium">
                 Courses
-              </Link>
-              <Link href="/events" className="text-buttercup hover:text-yellow-200 transition-colors">
+              </a>
+              <a href="/events" className="text-white hover:text-buttercup transition-colors">
                 Events
-              </Link>
-              <Link href="/news" className="text-buttercup hover:text-yellow-200 transition-colors font-medium">
+              </a>
+              <a href="/news" className="text-white hover:text-buttercup transition-colors">
                 News
-              </Link>
+              </a>
               <Button className="bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">Join Us</Button>
             </div>
           </div>
@@ -264,35 +264,34 @@ export default function News() {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
-      <section className="py-20 bg-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-buttercup mb-4">Stay Updated</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Subscribe to our newsletter to receive the latest AI news, research updates, and society announcements.
-            </p>
-          </div>
+ {/* Newsletter Signup */}
+<section className="py-20 bg-gray-700">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl lg:text-4xl font-bold text-buttercup mb-4">Stay Connected</h2>
+      <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+        Interested in joining or staying up-to-date with LNU AI Society? Fill out the form below to get involved!
+      </p>
+    </div>
 
-          <Card className="max-w-2xl mx-auto bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors text-white">
-            <CardContent className="p-8">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-buttercup focus:border-transparent bg-gray-700 text-white"
-                />
-                <Button className="bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold px-8">
-                  Subscribe
-                </Button>
-              </div>
-              <p className="text-sm text-gray-400 mt-4 text-center">
-                We respect your privacy. Unsubscribe at any time.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+    <Card className="max-w-xl mx-auto bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors text-white text-center">
+      <CardContent className="p-8">
+        <p className="text-lg text-gray-300 mb-6">
+          Click the button below to fill out our interest form.
+        </p>
+        <Button
+          className="bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold px-8 py-3 text-lg"
+          asChild
+        >
+          <a href="https://your-google-form-link.com" target="_blank" rel="noopener noreferrer">
+            Google Form Link
+          </a>
+        </Button>
+      </CardContent>
+    </Card>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="bg-soot-glue py-12">

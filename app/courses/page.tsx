@@ -2,8 +2,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Clock, Users, BookOpen, Star } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
 
 export default function Courses() {
   return (
@@ -12,32 +10,32 @@ export default function Courses() {
       <nav className="bg-soot-glue border-b border-gray-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-3">
-              <Image
+            <a href="/" className="flex items-center space-x-3">
+              <img
                 src="/images/logo-symbol.png"
                 alt="LNU AI Society Logo"
                 width={40}
                 height={40}
                 className="h-10 w-auto"
               />
-              <span className="text-xl font-bold text-buttercup">LNU AI Society</span>
-            </Link>
+              <span className="text-xl font-bold text-white">LNU AI Society</span>
+            </a>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-white hover:text-buttercup transition-colors">
+              <a href="/" className="text-white hover:text-buttercup transition-colors">
                 Home
-              </Link>
-              <Link href="/about" className="text-white hover:text-buttercup transition-colors">
+              </a>
+              <a href="/about" className="text-white hover:text-buttercup transition-colors">
                 About
-              </Link>
-              <Link href="/courses" className="text-white hover:text-buttercup transition-colors font-medium">
+              </a>
+              <a href="/courses" className="text-white hover:text-buttercup transition-colors font-medium">
                 Courses
-              </Link>
-              <Link href="/events" className="text-white hover:text-buttercup transition-colors">
+              </a>
+              <a href="/events" className="text-white hover:text-buttercup transition-colors">
                 Events
-              </Link>
-              <Link href="/news" className="text-white hover:text-buttercup transition-colors">
+              </a>
+              <a href="/news" className="text-white hover:text-buttercup transition-colors">
                 News
-              </Link>
+              </a>
               <Button className="bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">Join Us</Button>
             </div>
           </div>
@@ -56,7 +54,7 @@ export default function Courses() {
       </section>
 
       {/* Course Categories */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-soot-glue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Learning Paths</h2>
@@ -313,8 +311,8 @@ export default function Courses() {
       <footer className="bg-soot-glue py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <Link href="/" className="flex items-center space-x-3 mb-4 md:mb-0">
-              <Image
+            <a href="/" className="flex items-center space-x-3 mb-4 md:mb-0">
+              <img
                 src="/images/logo-symbol.png"
                 alt="LNU AI Society"
                 width={32}
@@ -322,7 +320,7 @@ export default function Courses() {
                 className="h-8 w-auto filter invert"
               />
               <span className="text-xl font-bold text-buttercup">LNU AI Society</span>
-            </Link>
+            </a>
             <div className="flex items-center space-x-6">
               <div className="flex space-x-4">
                 <a href="#" className="text-white/80 hover:text-buttercup transition-colors">

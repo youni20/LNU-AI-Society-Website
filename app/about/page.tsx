@@ -113,111 +113,179 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Meet Our Board</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Our dedicated team of students leading the AI revolution at Linnaeus University.
-            </p>
+<section className="py-20 bg-gray-800">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Meet Our Board</h2>
+      <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+        Our dedicated team of students leading the AI revolution at Linnaeus University.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Sai */}
+      <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors text-center">
+        <CardHeader>
+          <div className="w-24 h-24 bg-buttercup rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span className="text-2xl font-bold text-soot-glue">SR</span>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors text-center">
-              <CardHeader>
-                <div className="w-24 h-24 bg-buttercup rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-soot-glue">AS</span>
-                </div>
-                <CardTitle className="text-white">Alex Svensson</CardTitle>
-                <CardDescription className="text-gray-400">President</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 mb-4">
-                  Computer Science student passionate about deep learning and neural networks.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
-                  >
-                    <Github className="h-4 w-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors text-center">
-              <CardHeader>
-                <div className="w-24 h-24 bg-lily-valley rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-soot-glue">EL</span>
-                </div>
-                <CardTitle className="text-white">Emma Lindqvist</CardTitle>
-                <CardDescription className="text-gray-400">Vice President</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 mb-4">
-                  Data Science student specializing in machine learning applications in healthcare.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
-                  >
-                    <Twitter className="h-4 w-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors text-center">
-              <CardHeader>
-                <div className="w-24 h-24 bg-buttercup rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-soot-glue">MJ</span>
-                </div>
-                <CardTitle className="text-white">Marcus Johansson</CardTitle>
-                <CardDescription className="text-gray-400">Technical Lead</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 mb-4">
-                  Software Engineering student with expertise in AI model deployment and MLOps.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
-                  >
-                    <Github className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+          <CardTitle className="text-white">Saisharan Raja</CardTitle>
+          <CardDescription className="text-gray-400">President</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-gray-300 mb-4">Leading innovation and strategic direction for LNU AI Society.</p>
+          <div className="flex justify-center space-x-3">
+            <Button
+              size="sm"
+              variant="outline"
+              className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
+              asChild
+            >
+              <a href="mailto:sai@lnuais.com">Email</a>
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
+              asChild
+            >
+              <a href="https://www.linkedin.com/in/saisharanraja/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </Button>
           </div>
-        </div>
-      </section>
+        </CardContent>
+      </Card>
+
+      {/* Laknath */}
+      <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors text-center">
+        <CardHeader>
+          <div className="w-24 h-24 bg-lily-valley rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span className="text-2xl font-bold text-soot-glue">LP</span>
+          </div>
+          <CardTitle className="text-white">Laknath Ranaraja Perera</CardTitle>
+          <CardDescription className="text-gray-400">Vice President</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-gray-300 mb-4">Focused on operations, planning, and society coordination.</p>
+          <div className="flex justify-center space-x-3">
+            <Button
+              size="sm"
+              variant="outline"
+              className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
+              asChild
+            >
+              <a href="mailto:laknath@lnuais.com">Email</a>
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
+              asChild
+            >
+              <a href="https://www.linkedin.com/in/lranaraja/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Abdi */}
+      <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors text-center">
+        <CardHeader>
+          <div className="w-24 h-24 bg-buttercup rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span className="text-2xl font-bold text-soot-glue">AS</span>
+          </div>
+          <CardTitle className="text-white">Abdirashiid Sammantar</CardTitle>
+          <CardDescription className="text-gray-400">Head of Communications</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-gray-300 mb-4">Responsible for outreach, messaging, and media relations.</p>
+          <div className="flex justify-center space-x-3">
+            <Button
+              size="sm"
+              variant="outline"
+              className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
+              asChild
+            >
+              <a href="mailto:abdi@lnuais.com">Email</a>
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
+              asChild
+            >
+              <a href="https://www.linkedin.com/in/abdirashiid-sammantar-3b7863238/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Younus */}
+      <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors text-center">
+        <CardHeader>
+          <div className="w-24 h-24 bg-ivy rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span className="text-2xl font-bold text-soot-glue">YM</span>
+          </div>
+          <CardTitle className="text-white">Younus Mashoor</CardTitle>
+          <CardDescription className="text-gray-400">Head of Marketing</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-gray-300 mb-4">Leading marketing initiatives and promotional strategies.</p>
+          <div className="flex justify-center space-x-3">
+            <Button
+              size="sm"
+              variant="outline"
+              className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
+              asChild
+            >
+              <a href="mailto:younus@lnuais.com">Email</a>
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
+              asChild
+            >
+              <a href="https://www.linkedin.com/in/younusmashoor/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* William */}
+      <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors text-center">
+        <CardHeader>
+          <div className="w-24 h-24 bg-azalea rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span className="text-2xl font-bold text-soot-glue">WM</span>
+          </div>
+          <CardTitle className="text-white">William McCallum-Vallmark</CardTitle>
+          <CardDescription className="text-gray-400">Secretary</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-gray-300 mb-4">Organizing meetings, records, and official documents.</p>
+          <div className="flex justify-center space-x-3">
+            <Button
+              size="sm"
+              variant="outline"
+              className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
+              asChild
+            >
+              <a href="mailto:william@lnuais.com">Email</a>
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="p-2 bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
+              asChild
+            >
+              <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+
 
       {/* Contact Section */}
       <section className="py-20 bg-soot-glue">
@@ -236,7 +304,7 @@ export default function About() {
                 <CardTitle className="text-white">Email Us</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300">ai.society@lnu.se</p>
+                <p className="text-gray-300">contact@lnuais.com</p>
               </CardContent>
             </Card>
 
@@ -250,8 +318,6 @@ export default function About() {
                   Linnaeus University
                   <br />
                   Växjö Campus
-                  <br />
-                  Building G, Room 2:05
                 </p>
               </CardContent>
             </Card>
