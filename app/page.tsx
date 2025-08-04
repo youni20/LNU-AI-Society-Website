@@ -3,15 +3,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, Users, Brain, Zap, ArrowRight, BookOpen, Newspaper } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { MobileNav } from "@/components/mobile-nav"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-soot-glue"> 
+    <div className="min-h-screen bg-soot-glue">
       {/* Navigation */}
       <nav className="bg-soot-glue border-b border-gray-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center space-x-3">
               <Image
                 src="/images/logo-symbol.png"
                 alt="LNU AI Society Logo"
@@ -20,7 +21,7 @@ export default function Home() {
                 className="h-10 w-auto"
               />
               <span className="text-xl font-bold text-white">LNU AI Society</span>
-            </div>
+            </Link>
             <div className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-white hover:text-buttercup transition-colors font-medium">
                 Home
@@ -39,22 +40,23 @@ export default function Home() {
               </Link>
               <Button className="bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">Join Us</Button>
             </div>
+            <MobileNav currentPath="/" />
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-buttercup py-20 lg:py-32">
+      <section className="bg-buttercup py-12 sm:py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl lg:text-6xl font-bold text-soot-glue mb-6">
-              AI Isn’t the Future <span className="text-soot-glue">You Are</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-soot-glue mb-4 sm:mb-6">
+              AI Isn't the Future <span className="text-soot-glue">You Are</span>
             </h1>
-            <p className="text-xl text-soot-glue mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-soot-glue mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
               Join Linnaeus University's premier AI community. We're a passionate group of students, researchers, and
               innovators exploring the frontiers of artificial intelligence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0">
               <Button size="lg" className="bg-soot-glue hover:bg-gray-800 text-buttercup font-semibold">
                 Join Our Community
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -63,7 +65,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-soot-glue text-soot-glue hover:bg-soot-glue hover:text-buttercup bg-transparent"
+                  className="w-full sm:w-auto border-soot-glue text-soot-glue hover:bg-soot-glue hover:text-buttercup bg-transparent"
                 >
                   Upcoming Events
                 </Button>
@@ -74,17 +76,16 @@ export default function Home() {
       </section>
 
       {/* What We're About Section */}
-      <section className="py-20 bg-soot-glue">
+      <section className="py-12 sm:py-20 bg-soot-glue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">What We're About</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">What We're About</h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
               We are a student-driven organization at Linnaeus University dedicated to advancing artificial intelligence
               knowledge, fostering innovation, and building a community of AI enthusiasts.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader className="text-center">
                 <Brain className="h-12 w-12 text-crocus mx-auto mb-4" />
@@ -97,7 +98,6 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-
             <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader className="text-center">
                 <Users className="h-12 w-12 text-ivy mx-auto mb-4" />
@@ -109,7 +109,6 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-
             <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader className="text-center">
                 <Zap className="h-12 w-12 text-azalea mx-auto mb-4" />
@@ -121,7 +120,6 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-
             <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader className="text-center">
                 <Calendar className="h-12 w-12 text-crocus mx-auto mb-4" />
@@ -138,16 +136,15 @@ export default function Home() {
       </section>
 
       {/* Quick Links Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-12 sm:py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Explore Our Community</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">Explore Our Community</h2>
+            <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto px-4 sm:px-0">
               Discover everything we have to offer - from courses and events to the latest AI news and updates.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <Link href="/courses">
               <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors cursor-pointer h-full">
                 <CardHeader className="text-center">
@@ -161,7 +158,6 @@ export default function Home() {
                 </CardContent>
               </Card>
             </Link>
-
             <Link href="/events">
               <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors cursor-pointer h-full">
                 <CardHeader className="text-center">
@@ -175,7 +171,6 @@ export default function Home() {
                 </CardContent>
               </Card>
             </Link>
-
             <Link href="/news">
               <Card className="bg-gray-900 border-2 border-gray-700 hover:border-buttercup transition-colors cursor-pointer h-full">
                 <CardHeader className="text-center">
@@ -193,13 +188,11 @@ export default function Home() {
         </div>
       </section>
 
-     
-
       {/* Footer */}
       <footer className="bg-black py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-3 mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <Link href="/" className="flex items-center space-x-3">
               <Image
                 src="/images/logo-symbol.png"
                 alt="LNU AI Society"
@@ -208,10 +201,9 @@ export default function Home() {
                 className="h-8 w-auto filter invert"
               />
               <span className="text-xl font-bold text-buttercup">LNU AI Society</span>
-            </div>
-            <div className="flex items-center space-x-6">
+            </Link>
+            <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
               <div className="flex space-x-4">
-             
                 <a href="#" className="text-white/80 hover:text-buttercup transition-colors">
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -223,7 +215,7 @@ export default function Home() {
                   </svg>
                 </a>
               </div>
-              <div className="text-right">
+              <div className="text-center md:text-right">
                 <p className="text-white/80">© 2025 LNU AI Society. All rights reserved.</p>
               </div>
             </div>

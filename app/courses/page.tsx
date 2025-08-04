@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Clock, Users, BookOpen, Star, ExternalLink, Calendar, Globe } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { MobileNav } from "@/components/mobile-nav"
 
 export default function Courses() {
   return (
@@ -10,43 +13,44 @@ export default function Courses() {
       <nav className="bg-soot-glue border-b border-gray-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <a href="/" className="flex items-center space-x-3">
-              <img
-                src="/placeholder.svg?height=40&width=40"
+            <Link href="/" className="flex items-center space-x-3">
+              <Image
+                src="/images/logo-symbol.png"
                 alt="LNU AI Society Logo"
                 width={40}
                 height={40}
                 className="h-10 w-auto"
               />
               <span className="text-xl font-bold text-white">LNU AI Society</span>
-            </a>
+            </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-white hover:text-buttercup transition-colors">
+              <Link href="/" className="text-white hover:text-buttercup transition-colors">
                 Home
-              </a>
-              <a href="/about" className="text-white hover:text-buttercup transition-colors">
+              </Link>
+              <Link href="/about" className="text-white hover:text-buttercup transition-colors">
                 About
-              </a>
-              <a href="/courses" className="text-white hover:text-buttercup transition-colors font-medium">
+              </Link>
+              <Link href="/courses" className="text-white hover:text-buttercup transition-colors font-medium">
                 Courses
-              </a>
-              <a href="/events" className="text-white hover:text-buttercup transition-colors">
+              </Link>
+              <Link href="/events" className="text-white hover:text-buttercup transition-colors">
                 Events
-              </a>
-              <a href="/news" className="text-white hover:text-buttercup transition-colors">
+              </Link>
+              <Link href="/news" className="text-white hover:text-buttercup transition-colors">
                 News
-              </a>
+              </Link>
               <Button className="bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">Join Us</Button>
             </div>
+            <MobileNav currentPath="/courses" />
           </div>
         </div>
       </nav>
 
       {/* Courses Hero */}
-      <section className="bg-buttercup py-16">
+      <section className="bg-buttercup py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-soot-glue mb-4">AI & ML Courses at LNU</h1>
-          <p className="text-xl text-soot-glue max-w-3xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-soot-glue mb-4">AI & ML Courses at LNU</h1>
+          <p className="text-lg sm:text-xl text-soot-glue max-w-3xl mx-auto px-4 sm:px-0">
             Discover artificial intelligence and machine learning courses offered at Linnaeus University, Sweden. Build
             your expertise with our comprehensive academic programs.
           </p>
@@ -54,15 +58,15 @@ export default function Courses() {
       </section>
 
       {/* Course Categories */}
-      <section className="py-20 bg-soot-glue">
+      <section className="py-12 sm:py-20 bg-soot-glue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Academic Programs</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">Academic Programs</h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
               Choose from bachelor's and master's level courses in AI and machine learning at Linnaeus University.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
             <Card className="border-2 border-gray-700 hover:border-buttercup transition-colors bg-gray-800">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-crocus rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -75,8 +79,6 @@ export default function Courses() {
                 <p className="text-gray-300 text-center mb-4">
                   Foundation courses in artificial intelligence, machine learning, and data science.
                 </p>
-                <div className="text-center">
-                </div>
               </CardContent>
             </Card>
             <Card className="border-2 border-gray-700 hover:border-buttercup transition-colors bg-gray-800">
@@ -91,8 +93,6 @@ export default function Courses() {
                 <p className="text-gray-300 text-center mb-4">
                   Specialized master's programs in AI, machine learning, and related fields.
                 </p>
-                <div className="text-center">
-                </div>
               </CardContent>
             </Card>
           </div>
@@ -100,15 +100,15 @@ export default function Courses() {
       </section>
 
       {/* LNU AI/ML Courses */}
-      <section className="py-20 bg-lily-valley">
+      <section className="py-12 sm:py-20 bg-lily-valley">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-soot-glue mb-4">AI & ML Courses at LNU</h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-soot-glue mb-4">AI & ML Courses at LNU</h2>
+            <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto px-4 sm:px-0">
               Current artificial intelligence and machine learning courses offered at Linnaeus University.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Computer Science - AI Track (Bachelor's) */}
             <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader>
@@ -148,7 +148,6 @@ export default function Courses() {
                 </Button>
               </CardContent>
             </Card>
-
             {/* Data Science Master's */}
             <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader>
@@ -188,7 +187,6 @@ export default function Courses() {
                 </Button>
               </CardContent>
             </Card>
-
             {/* Machine Learning Course */}
             <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader>
@@ -228,7 +226,6 @@ export default function Courses() {
                 </Button>
               </CardContent>
             </Card>
-
             {/* Artificial Intelligence Course */}
             <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader>
@@ -268,7 +265,6 @@ export default function Courses() {
                 </Button>
               </CardContent>
             </Card>
-
             {/* Deep Learning Course */}
             <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader>
@@ -308,7 +304,6 @@ export default function Courses() {
                 </Button>
               </CardContent>
             </Card>
-
             {/* Data Mining Course */}
             <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader>
@@ -349,12 +344,11 @@ export default function Courses() {
               </CardContent>
             </Card>
           </div>
-
           {/* Note about course information */}
-          <div className="mt-12 text-center">
-            <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 max-w-4xl mx-auto">
-              <h3 className="text-xl font-semibold text-white mb-3">Important Note</h3>
-              <p className="text-gray-300 mb-4">
+          <div className="mt-8 sm:mt-12 text-center">
+            <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 sm:p-6 max-w-4xl mx-auto">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">Important Note</h3>
+              <p className="text-gray-300 mb-4 text-sm sm:text-base">
                 Course offerings, schedules, and requirements may change. Please visit the official Linnaeus University
                 website for the most current and detailed information about AI and ML courses.
               </p>
@@ -373,14 +367,21 @@ export default function Courses() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-soot-glue py-12">
+     {/* Footer */}
+      <footer className="bg-black py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <a href="/" className="flex items-center space-x-3 mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <Link href="/" className="flex items-center space-x-3">
+              <Image
+                src="/images/logo-symbol.png"
+                alt="LNU AI Society"
+                width={32}
+                height={32}
+                className="h-8 w-auto filter invert"
+              />
               <span className="text-xl font-bold text-buttercup">LNU AI Society</span>
-            </a>
-            <div className="flex items-center space-x-6">
+            </Link>
+            <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
               <div className="flex space-x-4">
                 <a href="#" className="text-white/80 hover:text-buttercup transition-colors">
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -393,7 +394,7 @@ export default function Courses() {
                   </svg>
                 </a>
               </div>
-              <div className="text-right">
+              <div className="text-center md:text-right">
                 <p className="text-white/80">© 2025 LNU AI Society. All rights reserved.</p>
               </div>
             </div>
