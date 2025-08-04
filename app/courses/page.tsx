@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Clock, Users, BookOpen, Star } from "lucide-react"
+import { Clock, Users, BookOpen, Star, ExternalLink, Calendar, Globe } from "lucide-react"
 
 export default function Courses() {
   return (
@@ -12,7 +12,7 @@ export default function Courses() {
           <div className="flex justify-between items-center h-16">
             <a href="/" className="flex items-center space-x-3">
               <img
-                src="/images/logo-symbol.png"
+                src="/placeholder.svg?height=40&width=40"
                 alt="LNU AI Society Logo"
                 width={40}
                 height={40}
@@ -45,10 +45,10 @@ export default function Courses() {
       {/* Courses Hero */}
       <section className="bg-buttercup py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-soot-glue mb-4">AI Courses & Workshops</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold text-soot-glue mb-4">AI & ML Courses at LNU</h1>
           <p className="text-xl text-soot-glue max-w-3xl mx-auto">
-            Comprehensive learning paths designed to take you from beginner to advanced in artificial intelligence and
-            machine learning.
+            Discover artificial intelligence and machine learning courses offered at Linnaeus University, Sweden. Build
+            your expertise with our comprehensive academic programs.
           </p>
         </div>
       </section>
@@ -57,63 +57,41 @@ export default function Courses() {
       <section className="py-20 bg-soot-glue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Learning Paths</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Academic Programs</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose your learning journey based on your current skill level and interests.
+              Choose from bachelor's and master's level courses in AI and machine learning at Linnaeus University.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             <Card className="border-2 border-gray-700 hover:border-buttercup transition-colors bg-gray-800">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-crocus rounded-full mx-auto mb-4 flex items-center justify-center">
                   <BookOpen className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-white">Beginner</CardTitle>
-                <CardDescription className="text-gray-300">Perfect for those new to AI</CardDescription>
+                <CardTitle className="text-white">Bachelor's Level</CardTitle>
+                <CardDescription className="text-gray-300">Undergraduate courses in AI and ML</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 text-center mb-4">
-                  Start your AI journey with fundamental concepts and hands-on exercises.
+                  Foundation courses in artificial intelligence, machine learning, and data science.
                 </p>
                 <div className="text-center">
-                  <Badge className="bg-crocus text-white">4 Courses</Badge>
                 </div>
               </CardContent>
             </Card>
-
             <Card className="border-2 border-gray-700 hover:border-buttercup transition-colors bg-gray-800">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-ivy rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Star className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-white">Intermediate</CardTitle>
-                <CardDescription className="text-gray-300">Build on your existing knowledge</CardDescription>
+                <CardTitle className="text-white">Master's Level</CardTitle>
+                <CardDescription className="text-gray-300">Advanced graduate programs</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 text-center mb-4">
-                  Dive deeper into machine learning algorithms and practical applications.
+                  Specialized master's programs in AI, machine learning, and related fields.
                 </p>
                 <div className="text-center">
-                  <Badge className="bg-ivy text-white">6 Courses</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-gray-700 hover:border-buttercup transition-colors bg-gray-800">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-azalea rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Users className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-white">Advanced</CardTitle>
-                <CardDescription className="text-gray-300">Master cutting-edge techniques</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 text-center mb-4">
-                  Explore advanced topics like deep learning, NLP, and computer vision.
-                </p>
-                <div className="text-center">
-                  <Badge className="bg-azalea text-white">5 Courses</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -121,198 +99,285 @@ export default function Courses() {
         </div>
       </section>
 
-      {/* Featured Courses */}
+      {/* LNU AI/ML Courses */}
       <section className="py-20 bg-lily-valley">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-soot-glue mb-4">Featured Courses</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-soot-glue mb-4">AI & ML Courses at LNU</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Our most popular and comprehensive courses to get you started in AI.
+              Current artificial intelligence and machine learning courses offered at Linnaeus University.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Computer Science - AI Track (Bachelor's) */}
             <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-crocus text-white">Beginner</Badge>
+                  <Badge className="bg-crocus text-white">Bachelor's</Badge>
                   <div className="flex items-center text-sm text-gray-300">
-                    <Star className="h-4 w-4 mr-1 fill-current text-yellow-400" />
-                    4.8
+                    <Globe className="h-4 w-4 mr-1" />
+                    English
                   </div>
                 </div>
-                <CardTitle className="text-white">Introduction to Machine Learning</CardTitle>
+                <CardTitle className="text-white">Computer Science - AI Track</CardTitle>
                 <CardDescription className="text-gray-300">
-                  Learn the fundamentals of ML algorithms, data preprocessing, and model evaluation.
+                  Bachelor's program with specialization in artificial intelligence and machine learning.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center text-sm text-gray-300 mb-2">
-                  <Clock className="h-4 w-4 mr-2" />8 weeks • 2 hours/week
+                  <Calendar className="h-4 w-4 mr-2" />3 years • 180 ECTS
                 </div>
-                <div className="flex items-center text-sm text-gray-300 mb-4">
-                  <Users className="h-4 w-4 mr-2" />
-                  45 enrolled
-                </div>
-                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">
-                  Enroll Now
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-ivy text-white">Intermediate</Badge>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <Star className="h-4 w-4 mr-1 fill-current text-yellow-400" />
-                    4.9
-                  </div>
-                </div>
-                <CardTitle className="text-white">Deep Learning with Python</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Master neural networks, CNNs, and RNNs using TensorFlow and PyTorch.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
                 <div className="flex items-center text-sm text-gray-300 mb-2">
                   <Clock className="h-4 w-4 mr-2" />
-                  12 weeks • 3 hours/week
+                  Full-time • Campus Växjö
                 </div>
                 <div className="flex items-center text-sm text-gray-300 mb-4">
                   <Users className="h-4 w-4 mr-2" />
-                  32 enrolled
+                  Application: January 15
                 </div>
-                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">
-                  Enroll Now
+                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold" asChild>
+                  <a
+                    href="https://lnu.se/en/education/programmes/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
+                    Course Info <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
+            {/* Data Science Master's */}
             <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-crocus text-white">Beginner</Badge>
+                  <Badge className="bg-ivy text-white">Master's</Badge>
                   <div className="flex items-center text-sm text-gray-300">
-                    <Star className="h-4 w-4 mr-1 fill-current text-yellow-400" />
-                    4.7
+                    <Globe className="h-4 w-4 mr-1" />
+                    English
                   </div>
                 </div>
-                <CardTitle className="text-white">Data Science Fundamentals</CardTitle>
+                <CardTitle className="text-white">Data Science</CardTitle>
                 <CardDescription className="text-gray-300">
-                  Learn data analysis, visualization, and statistical methods for AI applications.
+                  Master's program focusing on big data analytics, machine learning, and AI applications.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center text-sm text-gray-300 mb-2">
-                  <Clock className="h-4 w-4 mr-2" />6 weeks • 2.5 hours/week
+                  <Calendar className="h-4 w-4 mr-2" />2 years • 120 ECTS
                 </div>
-                <div className="flex items-center text-sm text-gray-300 mb-4">
-                  <Users className="h-4 w-4 mr-2" />
-                  58 enrolled
-                </div>
-                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">
-                  Enroll Now
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-azalea text-white">Advanced</Badge>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <Star className="h-4 w-4 mr-1 fill-current text-yellow-400" />
-                    4.9
-                  </div>
-                </div>
-                <CardTitle className="text-white">Natural Language Processing</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Explore text processing, sentiment analysis, and language models like GPT.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
                 <div className="flex items-center text-sm text-gray-300 mb-2">
                   <Clock className="h-4 w-4 mr-2" />
-                  10 weeks • 4 hours/week
+                  Full-time • Campus Växjö
                 </div>
                 <div className="flex items-center text-sm text-gray-300 mb-4">
                   <Users className="h-4 w-4 mr-2" />
-                  28 enrolled
+                  Application: January 15
                 </div>
-                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">
-                  Enroll Now
+                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold" asChild>
+                  <a
+                    href="https://lnu.se/en/education/programmes/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
+                    Course Info <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
+            {/* Machine Learning Course */}
             <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-ivy text-white">Intermediate</Badge>
+                  <Badge className="bg-azalea text-white">Master's Level</Badge>
                   <div className="flex items-center text-sm text-gray-300">
-                    <Star className="h-4 w-4 mr-1 fill-current text-yellow-400" />
-                    4.8
+                    <Globe className="h-4 w-4 mr-1" />
+                    English
                   </div>
                 </div>
-                <CardTitle className="text-white">Computer Vision</CardTitle>
+                <CardTitle className="text-white">Machine Learning</CardTitle>
                 <CardDescription className="text-gray-300">
-                  Learn image processing, object detection, and facial recognition techniques.
+                  Advanced course covering supervised and unsupervised learning algorithms.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center text-sm text-gray-300 mb-2">
-                  <Clock className="h-4 w-4 mr-2" />8 weeks • 3 hours/week
+                  <Calendar className="h-4 w-4 mr-2" />1 semester • 7.5 ECTS
+                </div>
+                <div className="flex items-center text-sm text-gray-300 mb-2">
+                  <Clock className="h-4 w-4 mr-2" />
+                  Period 1 • Autumn
                 </div>
                 <div className="flex items-center text-sm text-gray-300 mb-4">
                   <Users className="h-4 w-4 mr-2" />
-                  35 enrolled
+                  Prerequisites: Programming
                 </div>
-                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">
-                  Enroll Now
+                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold" asChild>
+                  <a
+                    href="https://lnu.se/en/education/courses/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
+                    Course Info <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
                 </Button>
               </CardContent>
             </Card>
 
+            {/* Artificial Intelligence Course */}
             <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-azalea text-white">Advanced</Badge>
+                  <Badge className="bg-ivy text-white">Bachelor's Level</Badge>
                   <div className="flex items-center text-sm text-gray-300">
-                    <Star className="h-4 w-4 mr-1 fill-current text-yellow-400" />
-                    4.9
+                    <Globe className="h-4 w-4 mr-1" />
+                    English
                   </div>
                 </div>
-                <CardTitle className="text-white">AI Ethics & Responsible AI</CardTitle>
+                <CardTitle className="text-white">Artificial Intelligence</CardTitle>
                 <CardDescription className="text-gray-300">
-                  Understand the ethical implications and responsible development of AI systems.
+                  Introduction to AI concepts, search algorithms, and knowledge representation.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center text-sm text-gray-300 mb-2">
-                  <Clock className="h-4 w-4 mr-2" />4 weeks • 2 hours/week
+                  <Calendar className="h-4 w-4 mr-2" />1 semester • 7.5 ECTS
+                </div>
+                <div className="flex items-center text-sm text-gray-300 mb-2">
+                  <Clock className="h-4 w-4 mr-2" />
+                  Period 2 • Spring
                 </div>
                 <div className="flex items-center text-sm text-gray-300 mb-4">
                   <Users className="h-4 w-4 mr-2" />
-                  42 enrolled
+                  Prerequisites: Mathematics
                 </div>
-                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">
-                  Enroll Now
+                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold" asChild>
+                  <a
+                    href="https://lnu.se/en/education/courses/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
+                    Course Info <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
                 </Button>
               </CardContent>
             </Card>
+
+            {/* Deep Learning Course */}
+            <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-2">
+                  <Badge className="bg-azalea text-white">Master's Level</Badge>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <Globe className="h-4 w-4 mr-1" />
+                    English
+                  </div>
+                </div>
+                <CardTitle className="text-white">Deep Learning</CardTitle>
+                <CardDescription className="text-gray-300">
+                  Advanced neural networks, CNNs, RNNs, and modern deep learning architectures.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center text-sm text-gray-300 mb-2">
+                  <Calendar className="h-4 w-4 mr-2" />1 semester • 7.5 ECTS
+                </div>
+                <div className="flex items-center text-sm text-gray-300 mb-2">
+                  <Clock className="h-4 w-4 mr-2" />
+                  Period 2 • Spring
+                </div>
+                <div className="flex items-center text-sm text-gray-300 mb-4">
+                  <Users className="h-4 w-4 mr-2" />
+                  Prerequisites: ML Course
+                </div>
+                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold" asChild>
+                  <a
+                    href="https://lnu.se/en/education/courses/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
+                    Course Info <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Data Mining Course */}
+            <Card className="bg-gray-800 border-2 border-gray-700 hover:border-buttercup transition-colors">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-2">
+                  <Badge className="bg-ivy text-white">Master's Level</Badge>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <Globe className="h-4 w-4 mr-1" />
+                    English
+                  </div>
+                </div>
+                <CardTitle className="text-white">Data Mining</CardTitle>
+                <CardDescription className="text-gray-300">
+                  Techniques for discovering patterns in large datasets using statistical and ML methods.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center text-sm text-gray-300 mb-2">
+                  <Calendar className="h-4 w-4 mr-2" />1 semester • 7.5 ECTS
+                </div>
+                <div className="flex items-center text-sm text-gray-300 mb-2">
+                  <Clock className="h-4 w-4 mr-2" />
+                  Period 1 • Autumn
+                </div>
+                <div className="flex items-center text-sm text-gray-300 mb-4">
+                  <Users className="h-4 w-4 mr-2" />
+                  Prerequisites: Statistics
+                </div>
+                <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold" asChild>
+                  <a
+                    href="https://lnu.se/en/education/courses/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
+                    Course Info <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Note about course information */}
+          <div className="mt-12 text-center">
+            <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 max-w-4xl mx-auto">
+              <h3 className="text-xl font-semibold text-white mb-3">Important Note</h3>
+              <p className="text-gray-300 mb-4">
+                Course offerings, schedules, and requirements may change. Please visit the official Linnaeus University
+                website for the most current and detailed information about AI and ML courses.
+              </p>
+              <Button className="bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold" asChild>
+                <a
+                  href="https://lnu.se/en/education/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                >
+                  Visit LNU Education Portal <ExternalLink className="h-4 w-4 ml-2" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
-
-      
 
       {/* Footer */}
       <footer className="bg-soot-glue py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <a href="/" className="flex items-center space-x-3 mb-4 md:mb-0">
-            
               <span className="text-xl font-bold text-buttercup">LNU AI Society</span>
             </a>
             <div className="flex items-center space-x-6">
