@@ -77,9 +77,12 @@ export function MobileNav({ currentPath = "/" }: MobileNavProps) {
                   </Link>
                 ))}
                 <div className="pt-4">
-                  <Button className="w-full bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold">
-                    Join Us
-                  </Button>
+                  <Button 
+  className="bg-buttercup hover:bg-yellow-400 text-soot-glue font-semibold"
+  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdpGScG5keRrPnXk3q-qDLXzQoC4Ij8i4bUT7ir-KTeFB4m4A/viewform?usp=header', '_blank')}
+>
+  Join Us
+</Button>
                 </div>
               </div>
             </nav>
